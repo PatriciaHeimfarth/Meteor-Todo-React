@@ -20,12 +20,19 @@ export const App = () => {
   );
 
   return (
-    <div>
-      <h1>Welcome to Meteor!</h1>
+    <div className="app">
+    <header>
+      <div className="app-bar">
+        <div className="app-header">
+          <h1>Todo List</h1>
+        </div>
+      </div>
+    </header>
 
+    <div className="main">
       <TaskForm />
 
-      <ul>
+      <ul className="tasks">
         {tasks.map(task => (
           <Task
             key={task._id}
@@ -36,5 +43,6 @@ export const App = () => {
         ))}
       </ul>
     </div>
+  </div>
   );
 };
